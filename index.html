@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="الموقع الشخصي لـ Ruba Alharbi، طالبة علوم حاسب مهتمة بالبرمجة وتطوير المواقع والأمن السيبراني." />
+  <meta name="theme-color" content="#09070d" />
+  <meta property="og:title" content="Ruba Alharbi | Computer Science" />
+  <meta property="og:description" content="Portfolio شخصي يعرض نبذة عني، مهاراتي، مشاريعي، نماذج أعمالي وخدماتي البرمجية." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2309070d'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='42' font-weight='700' fill='%23d8b6ff'%3ER%3C/text%3E%3C/svg%3E" />
+  <title>Ruba Alharbi | Computer Science</title>
+  <style>
+    :root {
+      --bg:#09070d; --panel:#131019; --panel2:#1b1424; --text:#f8f4fb; --muted:#b8aec1;
+      --accent:#a96bff; --accent2:#ef82c9; --line:rgba(255,255,255,.09); --soft:rgba(169,107,255,.10);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:
+      radial-gradient(circle at 12% 8%,rgba(169,107,255,.16),transparent 28%),
+      radial-gradient(circle at 92% 27%,rgba(239,130,201,.09),transparent 25%),var(--bg);color:var(--text);line-height:1.8}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(16px);background:rgba(9,7,13,.78);border-bottom:1px solid var(--line)}
+    .nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:750}.logo{width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(169,107,255,.45);border-radius:14px;font-size:26px;font-weight:900;background:linear-gradient(135deg,rgba(169,107,255,.2),rgba(239,130,201,.08));box-shadow:0 0 28px rgba(169,107,255,.16)}
+    .nav-links{display:flex;gap:18px;color:var(--muted);font-size:14px}.nav-links a:hover{color:var(--text)}
+    .hero{min-height:78vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:46px;padding:72px 0}.eyebrow{color:var(--accent2);font-size:13px;letter-spacing:.09em}.hero h1{font-size:clamp(44px,7vw,84px);line-height:1.04;margin:10px 0 16px}.subtitle{font-size:clamp(21px,2.3vw,30px);color:#d7c9e4}.hero p{max-width:760px;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{padding:11px 17px;border:1px solid var(--line);border-radius:12px;display:inline-block;transition:.2s;background:rgba(255,255,255,.015)}.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#100a14;font-weight:800}.btn:hover{transform:translateY(-2px);border-color:rgba(169,107,255,.35)}
+    .hero-logo-wrap{display:grid;place-items:center}.hero-logo{width:min(350px,78vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;position:relative;border:1px solid rgba(169,107,255,.27);background:radial-gradient(circle,rgba(169,107,255,.15),transparent 58%),linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.01));box-shadow:inset 0 0 80px rgba(169,107,255,.05),0 0 80px rgba(169,107,255,.08)}
+    .hero-logo:before,.hero-logo:after{content:"";position:absolute;border-radius:50%;border:1px dashed rgba(239,130,201,.22)}.hero-logo:before{inset:25px}.hero-logo:after{inset:52px}.hero-logo span{font-family:Georgia,serif;font-size:155px;font-weight:900;color:#d8b6ff;text-shadow:0 0 35px rgba(169,107,255,.38);z-index:2}
+    section{padding:78px 0}.section-title{margin-bottom:26px}.section-title h2{font-size:34px;margin:0 0 5px}.section-title p{margin:0;color:var(--muted)}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:18px;padding:23px}.about p,.project p,.service p,.review p{color:var(--muted)}
+    .skills-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.skill{min-height:84px;display:grid;place-items:center;text-align:center;font-weight:700}
+    .projects-grid,.services-grid,.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project h3,.service h3{margin:0 0 8px}.tag{display:inline-block;margin:4px 5px 0 0;padding:5px 9px;font-size:12px;border-radius:999px;color:#decdf3;border:1px solid rgba(169,107,255,.24);background:rgba(169,107,255,.08)}
+    .sample.hidden{display:none}.sample .mini{font-size:13px;color:#9e91a8}.more-wrap{text-align:center;margin-top:20px}.samples-more{margin-top:18px}.samples-more summary{list-style:none;cursor:pointer;display:inline-block}.samples-more summary::-webkit-details-marker{display:none}.samples-more[open] .sample.hidden{display:block}.samples-more .more-less::after{content:"عرض المزيد"}.samples-more[open] .more-less::after{content:"عرض أقل"}
+    .service-icon{font-size:24px;margin-bottom:7px;color:#d2abff}.notice{margin-top:18px;padding:14px 16px;border-radius:13px;border:1px solid rgba(169,107,255,.2);background:var(--soft);color:#cbbfd4;font-size:14px}
+    .review{position:relative}.review:before{content:"“";position:absolute;top:10px;left:18px;font-size:56px;line-height:1;color:rgba(169,107,255,.22);font-family:Georgia,serif}.review p{margin:5px 0 18px}.review-meta{font-size:13px;color:#d6c7df}.review-badge{display:inline-block;margin-top:8px;font-size:12px;color:#d9c2ee;background:rgba(169,107,255,.09);border:1px solid rgba(169,107,255,.18);border-radius:999px;padding:4px 9px}
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:16px}.contact-box{min-height:160px}.contact-box strong{display:block;margin-bottom:8px}.social-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}.social-btn{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:#242126;border:1px solid rgba(255,255,255,.08);font-size:25px;font-weight:800;transition:.2s;box-shadow:0 8px 24px rgba(0,0,0,.18)}.social-btn:hover{transform:translateY(-4px);border-color:rgba(169,107,255,.45);background:var(--panel2);box-shadow:0 0 28px rgba(169,107,255,.18)}.social-btn svg{width:31px;height:31px;fill:currentColor}.social-label{margin-top:8px;color:var(--muted);font-size:13px;text-align:center}.social-item{display:flex;flex-direction:column;align-items:center}
+    footer{padding:28px 0 40px;color:#8f839c;border-top:1px solid var(--line);text-align:center}
+
+    .mobile-menu{display:none;position:relative}.mobile-menu summary{list-style:none;cursor:pointer;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;font-size:20px}.mobile-menu summary::-webkit-details-marker{display:none}.mobile-menu-panel{position:absolute;top:54px;left:0;min-width:210px;padding:10px;background:rgba(19,16,25,.98);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.35)}.mobile-menu-panel a{display:block;padding:9px 10px;border-radius:9px;color:var(--muted)}.mobile-menu-panel a:hover{background:var(--soft);color:var(--text)}
+    .card,.hero-logo,.btn,.social-btn{will-change:transform}.card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}.card:hover{transform:translateY(-3px);border-color:rgba(169,107,255,.24);box-shadow:0 16px 45px rgba(0,0,0,.18)}
+    @keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}.hero-logo{animation:floatLogo 6s ease-in-out infinite}
+    :focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-logo{animation:none}.card,.btn,.social-btn{transition:none}}
+    @media(max-width:920px){.skills-grid{grid-template-columns:repeat(2,1fr)}.projects-grid,.services-grid,.reviews-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.actions{justify-content:center}.hero-logo-wrap{order:-1}.projects-grid,.services-grid,.reviews-grid,.contact-grid{grid-template-columns:1fr}.nav-links{display:none}.mobile-menu{display:block}.brand span{display:none}.hero{padding-top:46px}.section-title h2{font-size:30px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand"><div class="logo">R</div><span>Ruba Alharbi</span></div>
+      <div class="nav-links">
+        <a href="#about">نبذة عني</a><a href="#skills">المهارات</a><a href="#projects">المشاريع</a><a href="#samples">نماذج برمجية</a><a href="#services">الخدمات</a><a href="#reviews">التقييمات</a><a href="#contact">تواصل</a>
+      </div>
+      <details class="mobile-menu">
+        <summary aria-label="فتح القائمة">☰</summary>
+        <div class="mobile-menu-panel">
+          <a href="#about">نبذة عني</a><a href="#skills">المهارات</a><a href="#projects">المشاريع</a><a href="#samples">نماذج برمجية</a><a href="#services">الخدمات</a><a href="#reviews">التقييمات</a><a href="#contact">تواصل معي</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">PORTFOLIO • COMPUTER SCIENCE</div>
+        <h1>Ruba Alharbi</h1>
+        <div class="subtitle">Computer Science</div>
+        <p>طالبة علوم حاسب في جامعة أم القرى، مهتمة بالبرمجة وتطوير المواقع، ولدي اهتمام بمجال الأمن السيبراني والاختبار الأخلاقي للأنظمة.</p>
+        <div class="actions"><a class="btn primary" href="#projects">مشاريعي</a><a class="btn" href="#services">الخدمات</a><a class="btn" href="#contact">تواصل معي</a></div>
+      </div>
+      <div class="hero-logo-wrap"><div class="hero-logo"><span>R</span></div></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-title"><h2>نبذة عني</h2><p>About Me</p></div>
+      <div class="card"><p>طالبة علوم حاسب في جامعة أم القرى، مهتمة بالبرمجة وتطوير المواقع، ولدي اهتمام بمجال الأمن السيبراني والاختبار الأخلاقي للأنظمة. أعمل باستمرار على تطوير مهاراتي من خلال التعلم والتطبيق العملي، وأسعى إلى تحويل الأفكار إلى حلول رقمية بسيطة وفعّالة. أحب تجربة التقنيات الجديدة، وتطوير المشاريع التي تجمع بين البرمجة والأمن التقني.</p></div>
+    </section>
+
+    <section id="skills">
+      <div class="section-title"><h2>المهارات</h2><p>Skills</p></div>
+      <div class="skills-grid">
+        <div class="card skill">Java</div><div class="card skill">C++</div><div class="card skill">HTML</div><div class="card skill">CSS</div><div class="card skill">JavaScript</div>
+        <div class="card skill">Web Development</div><div class="card skill">Linux / Kali Linux</div><div class="card skill">Cybersecurity</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title"><h2>مشاريعي</h2><p>Personal Projects</p></div>
+      <div class="projects-grid">
+        <article class="card project"><h3>رحلة السنة الأولى</h3><p>موقع يوثّق تجربة السنة الأولى الجامعية ويعرض أبرز المحطات والتجارب بطريقة رقمية منظمة وسهلة التصفح.</p><span class="tag">Web Development</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><div class="actions"><a class="btn" href="https://hasibhub.github.io/" target="_blank" rel="noreferrer">زيارة الموقع</a></div></article>
+        <article class="card project"><h3>دليلك الشعب</h3><p>بوت تيليجرام يسهّل الوصول إلى المعلومات المتعلقة بالشُعب بطريقة سريعة ومباشرة.</p><span class="tag">Telegram Bot</span><div class="actions"><a class="btn" href="https://t.me/DaleelShoabBot" target="_blank" rel="noreferrer">تجربة البوت</a></div></article>
+      </div>
+    </section>
+
+    <section id="samples">
+      <div class="section-title"><h2>نماذج أعمال برمجية</h2><p>Programming Work Samples</p></div>
+      <div class="projects-grid" id="samplesGrid">
+        <article class="card project sample"><h3>Hotel Management System</h3><p>نظام لإدارة عمليات الفندق مثل العملاء والغرف والحجوزات.</p><span class="tag">Management System</span></article>
+        <article class="card project sample"><h3>Library Management System</h3><p>نموذج نظام لإدارة الكتب وعمليات المكتبة.</p><span class="tag">Management System</span></article>
+        <article class="card project sample"><h3>Student Information System</h3><p>نظام لتنظيم وإدارة بيانات الطلاب والمعلومات الأكاديمية.</p><span class="tag">Information System</span></article>
+        <article class="card project sample"><h3>Pharmacy Management System</h3><p>نموذج لإدارة المنتجات والبيانات الأساسية في الصيدلية.</p><span class="tag">Management System</span></article>
+        <article class="card project sample"><h3>Bus Reservation System</h3><p>نظام لحجز المقاعد وتنظيم بيانات الرحلات والحجوزات.</p><span class="tag">Reservation System</span></article>
+        <article class="card project sample"><h3>Restaurant Billing System</h3><p>نموذج برمجي لتنظيم الطلبات وحساب الفواتير.</p><span class="tag">Billing System</span></article>
+
+      </div>
+      <details class="samples-more">
+        <summary class="btn more-less" aria-label="عرض المزيد من النماذج"></summary>
+        <div class="projects-grid" style="margin-top:16px">
+          <article class="card project sample hidden"><h3>Lab Management System</h3><p>نظام لإدارة بيانات المختبر وتنظيم عملياته.</p></article>
+          <article class="card project sample hidden"><h3>Supermarket Sales Management</h3><p>نظام لإدارة المبيعات والمنتجات في السوبرماركت.</p></article>
+          <article class="card project sample hidden"><h3>Traffic Accident Records</h3><p>نظام لتنظيم وحفظ سجلات الحوادث المرورية.</p></article>
+          <article class="card project sample hidden"><h3>Patient Information Management</h3><p>نظام لإدارة وتنظيم معلومات المرضى.</p></article>
+          <article class="card project sample hidden"><h3>Bakery Management System</h3><p>نموذج لإدارة منتجات المخبز والعمليات الأساسية.</p></article>
+          <article class="card project sample hidden"><h3>Cinema Management System</h3><p>نظام لإدارة بيانات السينما والعروض والحجوزات.</p></article>
+          <article class="card project sample hidden"><h3>Video Rental System</h3><p>نظام لتنظيم عمليات تأجير الفيديو وتتبع العناصر.</p></article>
+          <article class="card project sample hidden"><h3>Mobile Phone Shop Management</h3><p>نموذج لإدارة المنتجات والمبيعات في متجر الهواتف.</p></article>
+          <article class="card project sample hidden"><h3>Students Cafeteria Management System</h3><p>نظام لإدارة عمليات كافتيريا الطلاب.</p></article>
+        </div>
+      </details>
+    </section>
+
+    <section id="services">
+      <div class="section-title"><h2>الخدمات</h2><p>Services</p></div>
+      <div class="services-grid">
+        <article class="card service"><div class="service-icon">&lt;/&gt;</div><h3>تطوير مواقع ويب</h3><p>تصميم وتطوير صفحات ومواقع باستخدام HTML وCSS وJavaScript.</p></article>
+        <article class="card service"><div class="service-icon">⌘</div><h3>مشاريع برمجية تعليمية</h3><p>مساعدة في بناء وفهم مشاريع Java وC++ وتطبيق مفاهيم البرمجة.</p></article>
+        <article class="card service"><div class="service-icon">✓</div><h3>مراجعة وتصحيح الأكواد</h3><p>اكتشاف الأخطاء البرمجية، تحسين الكود، وشرح الفكرة بشكل واضح.</p></article>
+        <article class="card service"><div class="service-icon">◈</div><h3>مساعدة في الأمن السيبراني</h3><p>دعم تعليمي في Linux وKali Linux ومفاهيم الاختبار الأخلاقي واختبار الاختراق ضمن نطاق آمن وأخلاقي.</p></article>
+      </div>
+      <div class="notice">أقدّم الدعم والمساعدة التعليمية في المشاريع البرمجية، مع التركيز على الفهم والتطبيق العملي.</div>
+    </section>
+
+    <section id="reviews">
+      <div class="section-title"><h2>آراء الطالبات</h2><p>Student Reviews</p></div>
+      <div class="reviews-grid">
+        <article class="card review"><p>«الشغل كان جدًا نظيف ومرتب ومفهوم، والتقرير كان كامل والدكتورة أعجبت فيه.»</p></article>
+        <article class="card review"><p>«من أفضل الناس اللي تعاملت معهم، وكل تعديل أطلبه يتم، والشغل كان ممتاز.»</p></article>
+        <article class="card review"><p>«تعامل مريح وثقة عالية في التنفيذ.»</p></article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title"><h2>تواصل معي</h2><p>Contact</p></div>
+      <div class="contact-grid">
+        <div class="card contact-box">
+          <div class="social-links">
+            <div class="social-item">
+              <a class="social-btn" href="https://t.me/ltivxx" target="_blank" rel="noreferrer" aria-label="Telegram" title="Telegram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 3.2 18.5 19c-.2 1.1-.9 1.4-1.8.9l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6 12.8 1.2 11.3c-1-.3-1-1 .2-1.5L20 2.6c.9-.3 1.7.2 1.7.6Z"/></svg>
+              </a><span class="social-label">Telegram</span>
+            </div>
+            <div class="social-item">
+              <a class="social-btn" href="https://wa.me/966540340681" target="_blank" rel="noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.2-.3.2-.3.7-1 .1-.2.1-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1.2 1.8-1.2 2.8 0 1.7 1.2 3.3 1.4 3.5.2.2 2.4 3.7 5.9 5.2 2.2.9 3 .9 4 .7.7-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>
+              </a><span class="social-label">WhatsApp</span>
+            </div>
+            <div class="social-item">
+              <a class="social-btn" href="https://x.com/ltivxx?s=11" target="_blank" rel="noreferrer" aria-label="X" title="X">𝕏</a><span class="social-label">X</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026، جميع الحقوق محفوظة</footer>
+
+
+</body>
+</html>
