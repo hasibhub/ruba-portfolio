@@ -2203,3 +2203,80 @@ main, .two-columns, .box, .section-box, .hero, .intro,
 @media(max-width:390px){
  .contact-grid-refined .thank-you-original .thank-you-picture{width:64px;height:64px;flex-basis:64px;}
 }
+
+/* Final mobile refinements: laptop layout remains unchanged. */
+@media (max-width: 650px) {
+  .navbar, main { width: calc(100% - 28px); }
+  .navbar { gap: 8px; padding: 10px 12px; }
+  .hero {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+  }
+  .avatar { grid-column: 1; grid-row: 1; width: 100%; }
+  .intro { grid-column: 2; grid-row: 1; min-width: 0; text-align: left; }
+  .intro .hello { font-size: 19px; }
+  .intro h1 { font-size: clamp(28px, 7vw, 38px); overflow-wrap: normal; word-break: normal; }
+  .intro h2 { font-size: 19px; }
+  .intro .arabic-intro { font-size: 12px; line-height: 1.55; }
+  .pixel-art { grid-column: 1 / -1; grid-row: 2; width: 100%; max-width: 100%; }
+  .hero-buttons { gap: 8px; }
+  .hero-buttons .btn { padding: 9px 11px; font-size: 17px; }
+  .hero-buttons .btn-label { white-space: nowrap; }
+  .tagline { font-size: 17px; line-height: 1.4; }
+  #projects .projects-featured-grid, #projects .project-samples-grid { grid-template-columns: minmax(0,1fr); }
+  #reviews .reviews-grid, #services .cards-grid, .contact-grid-refined { grid-template-columns: minmax(0,1fr); }
+  #skills .skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .section-heading { gap: 10px; }
+  .section-heading > span { max-width: 100%; overflow-wrap: anywhere; }
+  .contact-grid-refined .thank-you-original { gap: 12px; }
+}
+@media (max-width: 440px) {
+  .hero { grid-template-columns: minmax(0,1fr); gap: 15px; }
+  .avatar { grid-column: 1; grid-row: 1; width: 135px; justify-self: center; }
+  .intro { grid-column: 1; grid-row: 2; text-align: center; }
+  .intro h1 { font-size: clamp(33px, 10vw, 43px); }
+  .intro .arabic-intro { font-size: 13px; line-height: 1.8; }
+  .pixel-art { grid-row: 3; aspect-ratio: 1.55 / 1; }
+  .hero-buttons { justify-content: center; }
+  .hero-buttons .btn { flex: 1 1 155px; min-width: 0; gap: 6px; }
+  .hero-buttons .btn-icon { width: 24px; height: 24px; flex-basis: 24px; }
+  .hero-buttons .btn-label { font-size: 16px; }
+  .hero-buttons .btn-arrow { font-size: 16px; }
+}
+@media (max-width: 345px) {
+  .hero-buttons .btn { flex: 1 1 100%; }
+  .navbar .terminal-icon { display: none; }
+}
+
+/* Project CTA: crisp vector arrow instead of OS-dependent emoji glyph */
+#projects .project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  direction: rtl;
+  white-space: nowrap;
+  background: linear-gradient(115deg, #f6ceed 0%, #ddbcfa 100%);
+  border: 1px solid #ebc3f5;
+  box-shadow: 0 3px 0 rgba(110, 64, 143, .35), inset 0 1px rgba(255,255,255,.45);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+#projects .project-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border: 1px solid rgba(116,58,159,.23);
+  border-radius: 6px;
+  background: rgba(104,54,139,.10);
+  color: #65317e;
+  flex: 0 0 23px;
+}
+#projects .project-link-arrow svg { width: 15px; height: 15px; display: block; }
+#projects .project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 rgba(110,64,143,.24), 0 7px 17px rgba(197,131,231,.24);
+}
