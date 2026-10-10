@@ -9,7 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="welcome-loading">
+<!-- Ruba's custom pixel welcome screen (decorative progress, not network status). -->
+<div class="welcome-loader" id="welcomeLoader" role="status" aria-label="Welcome to Ruba's website">
+  <div class="welcome-loader-inner">
+    <div class="welcome-avatar-wrap">
+      <img class="welcome-avatar-art" src="images/ruba-welcome.webp" alt="Ruba's pixel avatar wearing sunglasses and waving hello" width="865" height="755" fetchpriority="high">
+    </div>
+    <h2 class="welcome-heading">Welcome!</h2>
+    <p class="welcome-preparing">Getting things ready...</p>
+    <div class="welcome-loader-track" aria-hidden="true"><div class="welcome-loader-fill" id="welcomeLoaderFill"></div></div>
+    <div class="welcome-loader-meta"><span>Loading a little magic</span><span class="welcome-loader-percent" id="welcomeLoaderPercent">0%</span></div>
+  </div>
+</div>
 
 <header class="navbar" id="home">
   <!-- All navigation is tucked into the three-dot button on the left. -->
@@ -250,5 +262,6 @@
 <footer class="footer"></footer>
 
 <script src="script.js"></script>
+<script src="loading.js"></script>
 </body>
 </html>
