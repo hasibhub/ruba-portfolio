@@ -2319,3 +2319,6 @@ body.welcome-loading { overflow: hidden; }
   .welcome-heading { font-size: 45px; } .welcome-preparing { margin-bottom: 9px; } }
 @media (prefers-reduced-motion: reduce) { .welcome-avatar-art { animation: none; }
   .welcome-loader { transition: none; } }
+
+/* LinkedIn card matches the existing purple pixel contact design. */
+.contact-grid-refined .contact-icon-linkedin { color: #dfb5ff; }
