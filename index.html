@@ -189,6 +189,23 @@
     </div>
     <p class="reviews-intro">Feedback shared about my work, as featured on my previous portfolio.</p>
 
+    <div class="review-compose" aria-label="Leave a review">
+      <h3>Leave a Review ♡</h3>
+      <p>A little feedback, a lot of motivation... <span class="cursor" aria-hidden="true"></span></p>
+      <div class="review-face-choices" role="group" aria-label="Choose your reaction">
+        <button type="button" class="review-face-choice" data-face="3" aria-pressed="false"><img src="images/review-face-3.png" alt="Thoughtful pixel Ruba"><span>Could be better</span></button>
+        <button type="button" class="review-face-choice is-selected" data-face="1" aria-pressed="true"><img src="images/review-face-1.png" alt="Happy pixel Ruba"><span>Liked it</span></button>
+        <button type="button" class="review-face-choice" data-face="2" aria-pressed="false"><img src="images/review-face-2.png" alt="Heart-eyes pixel Ruba"><span>Loved it!</span></button>
+      </div>
+      <form id="visitorReviewForm" class="visitor-review-form">
+        <label for="visitorReviewName">Your name</label><input id="visitorReviewName" name="name" maxlength="50" required placeholder="Your name" autocomplete="nickname">
+        <label for="visitorReviewText">Your review</label><textarea id="visitorReviewText" name="review" maxlength="600" required rows="4" placeholder="Tell me what you think of my work ♡"></textarea>
+        <button type="submit">Preview my review ♡</button>
+      </form>
+      <p id="reviewFormStatus" class="review-form-status" role="status" aria-live="polite" hidden></p>
+      <div id="visitorReviewPreview" class="visitor-review-preview" aria-live="polite"></div>
+    </div>
+
     <div class="reviews-grid">
       <article class="review-card" aria-label="Student review 1">
         <div class="review-card-top">

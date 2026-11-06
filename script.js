@@ -51,3 +51,39 @@ if ("IntersectionObserver" in window) {
 
   sections.forEach((section) => observer.observe(section));
 }
+
+
+// Review composer: local preview only; no server-side submission is implied.
+(() => {
+  const form = document.getElementById('visitorReviewForm');
+  if (!form) return;
+  const buttons = [...document.querySelectorAll('.review-face-choice')];
+  const preview = document.getElementById('visitorReviewPreview');
+  const status = document.getElementById('reviewFormStatus');
+  let selected = '1';
+  buttons.forEach(button => button.addEventListener('click', () => {
+    selected = button.dataset.face;
+    buttons.forEach(item => {
+      const active = item === button;
+      item.classList.toggle('is-selected', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+  }));
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const name = form.elements.name.value.trim();
+    const message = form.elements.review.value.trim();
+    if (!name || !message) return;
+    preview.replaceChildren();
+    const img = document.createElement('img');
+    img.src = `images/review-face-${selected}.png`;
+    img.alt = 'Selected pixel reaction';
+    const heading = document.createElement('strong');
+    heading.textContent = name;
+    const body = document.createElement('p');
+    body.textContent = message;
+    preview.append(img, heading, body);
+    status.hidden = false;
+    status.textContent = 'Your review is a private preview on this device; it has not been published.';
+  });
+})();
