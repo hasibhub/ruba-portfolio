@@ -200,10 +200,11 @@
       <form id="visitorReviewForm" class="visitor-review-form">
         <label for="visitorReviewName">Your name</label><input id="visitorReviewName" name="name" maxlength="50" required placeholder="Your name" autocomplete="nickname">
         <label for="visitorReviewText">Your review</label><textarea id="visitorReviewText" name="review" maxlength="600" required rows="4" placeholder="Tell me what you think of my work ♡"></textarea>
-        <button type="submit">Preview my review ♡</button>
+        <button type="submit">Submit my review ♡</button>
       </form>
       <p id="reviewFormStatus" class="review-form-status" role="status" aria-live="polite" hidden></p>
       <div id="visitorReviewPreview" class="visitor-review-preview" aria-live="polite"></div>
+      <div id="communityReviews" class="reviews-grid" aria-live="polite"></div>
     </div>
 
     <div class="reviews-grid">
@@ -283,6 +284,7 @@
 
 
 
+<script src="supabase-config.js"></script>
 <script src="script.js"></script>
 <script src="loading.js"></script>
 </body>
